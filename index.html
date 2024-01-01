@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Español</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="../images/Frame 6.png" alt="logo" class="logo"></a>
+        <ul class="tags">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="use.html">How to Use?</a></li>
+            <li><a href="learn.html">Learn Spanish Numbers</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="slider">
+        <input type="range" id="numberRange" min="0" max="1000" value="500" step="10" oninput="updateRange()">
+        <p id="selectedRange">Selected Range: 500</p>
+    </div>
+
+    <div class="number-circle">
+        <span class="number-text">1942</span>
+    </div>  
+    
+    <div id="userInputContainer">
+        <input type="text" id="userInput" placeholder="Type your number here">
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="updateDisplayedNumber()">Refresh</button>
+        <button class="button" id="submitBtn" onclick="handleSubmit()">Submit</button>
+    </div>
+
+    <div id="resultContainer">
+        <p><span>Number: </span></p>
+        <p><span>Correct Name: </span></p>
+        <p><span>Your Answer:</span></p>
+        <p><span></span></p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
