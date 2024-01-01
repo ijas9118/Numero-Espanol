@@ -5,8 +5,10 @@ function updateRange() {
 }
 function updateDisplayedNumber() {
     var rangeValue = document.getElementById("numberRange").value;
-    randomNumber = Math.floor(Math.random() * (parseInt(rangeValue) + 1));
+    // randomNumber = Math.floor(Math.random() * (parseInt(rangeValue) + 1));
+    randomNumber = 703;
     document.querySelector(".number-text").innerText = randomNumber;
+    document.getElementById("userInput").value = "";
 }
 
 function handleSubmit() {
@@ -65,10 +67,15 @@ function getCorrectSpanishName(number) {
                 thousandDigit = Math.floor(number / 100);
                 remainder = number % 100;
         
-                // Handle the case for 21-29
                 if (remainder >= 21 && remainder <= 29) {
                     return units[thousandDigit] + "cientos veinti" + units[remainder % 10];
+                } else if (remainder >= 1 && remainder <= 99) {
+                    return "ciento " + getCorrectSpanishName(remainder % 100);
                 } else {
+                    if (number === 100)
+                        return 'Cien';
+                    if (remainder === 0)
+                        return units[thousandDigit] + "cientos";
                     return units[thousandDigit] + "cientos " + getCorrectSpanishName(remainder);
                 }
             } else {
