@@ -87,6 +87,11 @@ nav {
     border-radius: 20px;
 }
 
+#warningMessage {
+    color: #CE3C69;
+    padding: 10px;
+}
+
 .button-container {
     display: flex;
     width: 300px;
@@ -196,7 +201,7 @@ h2 {
         font-size: 0.8em;
     }
     #numberRange {
-        width: 80%;
+        width: 100%;
         margin-bottom: 10px;
     }
     .number-circle {
@@ -208,11 +213,9 @@ h2 {
     
     #userInputContainer {
         width: 70%;
-    }
-    
-    #userInput {
         font-size: small;
     }
+
     #resultContainer {
         width: 70%;
         padding: 20px;
@@ -223,5 +226,14 @@ h2 {
     #resultContainer p {
         font-size: 0.8em;
         margin-bottom: 10px;
+    }
+    h1 {
+        font-size: larger;
+    }
+    h2 {
+        font-size: large;
+    }
+    p, li {
+        font-size: small;
     }
 }
